@@ -23,11 +23,21 @@ def exercice4():
 
 def exercice5():
     try:
-        chiffre = int(input("entrez un chiffre à additionner : "))
-        chiffre2 = int(input("entrez un second chiffre à additionner : "))
-        print(f"le résultat est {chiffre + chiffre2}")
+        chiffreadd = int(input("entrez un chiffre à additionner : "))
+        chiffre2add = int(input("entrez un second chiffre à additionner : "))
+        print(f"le résultat est {chiffreadd + chiffre2add}")
     except ValueError:
         print("je suis incapable d'additionner tes machins")
+
+def exercice6():
+    try:
+        chiffresous = int(input("entrez un chiffre à soustraire : "))
+        chiffre2sous = int(input("entrez un chiffre à soustraire : "))
+        print(f"le résultat est {chiffresous - chiffre2sous}")
+    except ValueError:
+        print("je suis incapable de soustraire tes trucs")
+
+
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
@@ -42,6 +52,8 @@ def main():
         exercice4()
     if choix == "5":
         exercice5()
+    if choix == "6":
+        exercice6()
     else:
         print("Exercice non reconnu.")
         
