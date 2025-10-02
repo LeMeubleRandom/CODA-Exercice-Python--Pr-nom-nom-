@@ -82,6 +82,14 @@ def exercice12():
     duplicated_message = echo * 5
     print(duplicated_message)
 
+def exercice13():
+    n = 0
+    liste = []
+    while n < 5:
+        n = n + 1
+        liste.append(n)
+    print(liste)
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -109,6 +117,10 @@ def main():
         exercice11()
     if choix == "12":
         exercice12()
+    if choix == "13":
+        exercice13()
+    if choix == "14":
+        exercice14()
     else:
         print("Exercice non reconnu.")
         
