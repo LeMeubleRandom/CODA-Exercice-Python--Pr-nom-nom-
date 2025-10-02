@@ -32,12 +32,26 @@ def exercice5():
 def exercice6():
     try:
         chiffresous = int(input("entrez un chiffre à soustraire : "))
-        chiffre2sous = int(input("entrez un chiffre à soustraire : "))
+        chiffre2sous = int(input("entrez un second chiffre à soustraire : "))
         print(f"le résultat est {chiffresous - chiffre2sous}")
     except ValueError:
         print("je suis incapable de soustraire tes trucs")
 
+def exercice7():
+    try:
+        chiffreX = int(input("entrez un chiffre à multiplier : "))
+        chiffre2X = int(input("entrez un second chiffre à multiplier : "))
+        print(f"le résultat est {chiffreX * chiffre2X}")
+    except ValueError:
+        print("je suis incapable de mutiplier tes carabistouilles")
 
+def exercice8():
+    try:
+        chiffrediv = int(input("entrez un chiffre à diviser : "))
+        chiffre2div = int(input("entrez un second chiffre à diviser : "))
+        print(f"le résultat est {chiffrediv/chiffre2div}")
+    except ValueError:
+        print("je suis incapable de diviser tes poubelles")
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
@@ -54,6 +68,10 @@ def main():
         exercice5()
     if choix == "6":
         exercice6()
+    if choix == "7":
+        exercice7()
+    if choix == "8":
+        exercice8()
     else:
         print("Exercice non reconnu.")
         
