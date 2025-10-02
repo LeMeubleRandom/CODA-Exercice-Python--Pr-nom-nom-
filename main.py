@@ -76,7 +76,12 @@ def exercice11():
         print (f"le résultat est {moitié/2}")
     except ValueError:
         print ("je suis incapable d'avoir la moitié de ta triforce (y a 3 morceaux t'as capté)")
-    
+
+def exercice12():
+    echo = input("choisissez un message à dupliquer : ")
+    duplicated_message = echo * 5
+    print(duplicated_message)
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -102,6 +107,8 @@ def main():
         exercice10()
     if choix == "11":
         exercice11()
+    if choix == "12":
+        exercice12()
     else:
         print("Exercice non reconnu.")
         
