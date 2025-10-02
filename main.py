@@ -90,6 +90,12 @@ def exercice13():
         liste.append(n)
     print(liste)
 
+def exercice14():
+    compteur = 1
+    for compteur in range(compteur, 6):
+        résultat = compteur * 2
+        print(f"2 x {compteur} = {résultat}")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
