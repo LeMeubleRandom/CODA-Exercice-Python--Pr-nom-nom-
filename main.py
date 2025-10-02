@@ -152,6 +152,16 @@ def exercice21():
     except ValueError:
         print("pov : tu sais pas lire")
 
+def exercice22():
+    try:
+        age = int(input("donne-moi ton âge : "))
+        if age < 18:
+            print("mineur")
+        else:
+            print("majeur")
+    except ValueError:
+        print("reptilien")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -197,6 +207,8 @@ def main():
         exercice20()
     if choix == "21":
         exercice21()
+    if choix == "22":
+        exercice22()
     else:
         print("Exercice non reconnu.")
         
