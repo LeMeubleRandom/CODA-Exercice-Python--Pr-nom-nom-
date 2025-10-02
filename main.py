@@ -103,6 +103,14 @@ def exercice15():
     except ValueError:
         print("ce n'est visiblement pas d'une longueur suffisante")
 
+def exercice16():
+    try:
+        côté1 = int(input("entrez la longueur d'un côté : "))
+        côté2 = int(input("entrez une seconde longueur : "))
+        print(f"l'aire de cette figure est de {côté1*côté2}cm, m, etc...")
+    except ValueError:
+        print("il n'en a pas l'air mais ce n'est pas une longueur")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -136,6 +144,8 @@ def main():
         exercice14()
     if choix == "15":
         exercice15()
+    if choix == "16":
+        exercice16()
     else:
         print("Exercice non reconnu.")
         
