@@ -140,6 +140,18 @@ def exercice20():
     except ValueError:
         print("alien")
 
+def exercice21():
+    try:
+        number = int(input("donne-moi un chiffre à analyser : "))
+        if number > 0:
+            print("positif")
+        if number < 0:
+            print("négatif")
+        if number == 0:
+            print("nul")
+    except ValueError:
+        print("pov : tu sais pas lire")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -183,6 +195,8 @@ def main():
         exercice19()
     if choix == "20":
         exercice20()
+    if choix == "21":
+        exercice21()
     else:
         print("Exercice non reconnu.")
         
