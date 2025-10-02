@@ -118,6 +118,13 @@ def exercice17():
     except ValueError:
         print("No argent?")
 
+def exercice18():
+    try:
+        minute = int(input("entrez autant de minute que souhaité : "))
+        print(f"ça fait {minute*60} secondes")
+    except ValueError:
+        print("tic tac")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -155,6 +162,8 @@ def main():
         exercice16()
     if choix == "17":
         exercice17()
+    if choix == "18":
+        exercice18()
     else:
         print("Exercice non reconnu.")
         
