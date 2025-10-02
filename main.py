@@ -125,6 +125,13 @@ def exercice18():
     except ValueError:
         print("tic tac")
 
+def exercice19():
+    try:
+        HT = int(input("entrez un prix hors-taxe : "))
+        print(f"le prix est de {HT*1.2}€ TTC")
+    except ValueError:
+        print("eh oui faut raquer")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -164,6 +171,8 @@ def main():
         exercice17()
     if choix == "18":
         exercice18()
+    if choix == "19":
+        exercice19()
     else:
         print("Exercice non reconnu.")
         
