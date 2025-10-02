@@ -11,6 +11,16 @@ def exercice2():
 def exercice3():
     print("Première ligne\nDeuxième ligne\nTroisième ligne")
 
+def exercice4():
+    try:
+        année = int(input ("entrez votre année de naissance : "))
+        if année > 2025:
+            print("t'es trop dans le turfu mais écris une date valide stp")
+        else:
+            print(f"vous avez {2025 - année} ans")
+    except ValueError:
+        print("réessayez avec une date valide")
+        
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -20,6 +30,8 @@ def main():
         exercice2()
     if choix == "3":
         exercice3()
+    if choix == "4":
+        exercice4()
     else:
         print("Exercice non reconnu.")
         
