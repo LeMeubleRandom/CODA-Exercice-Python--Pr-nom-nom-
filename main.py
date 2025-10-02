@@ -96,6 +96,13 @@ def exercice14():
         résultat = compteur * 2
         print(f"2 x {compteur} = {résultat}")
 
+def exercice15():
+    try:
+        côté = int(input("entrez la longueur d'un côté d'une figure : "))
+        print(f"le périmètre de cette figure est de {côté * 4}cm, m, etc...")
+    except ValueError:
+        print("ce n'est visiblement pas d'une longueur suffisante")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -127,6 +134,8 @@ def main():
         exercice13()
     if choix == "14":
         exercice14()
+    if choix == "15":
+        exercice15()
     else:
         print("Exercice non reconnu.")
         
