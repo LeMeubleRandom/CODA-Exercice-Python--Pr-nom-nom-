@@ -162,6 +162,16 @@ def exercice22():
     except ValueError:
         print("reptilien")
 
+def exercice23():
+    try:
+        note = int(input("t'as eu quelle note : "))
+        if note >= 10:
+            print("t'es passé")
+        else:
+            print("rip")
+    except ValueError:
+        print("pronote existe")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -209,6 +219,8 @@ def main():
         exercice21()
     if choix == "22":
         exercice22()
+    if choix == "23":
+        exercice23()
     else:
         print("Exercice non reconnu.")
         
