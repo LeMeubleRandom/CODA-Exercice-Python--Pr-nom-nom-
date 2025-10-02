@@ -111,6 +111,13 @@ def exercice16():
     except ValueError:
         print("il n'en a pas l'air mais ce n'est pas une longueur")
 
+def exercice17():
+    try:
+        euro = int(input("valeur à convertir : "))
+        print(f"le taux de convertion est fixé à 1€ = 1.1$\n{euro}€ = {euro * 1.1}$")
+    except ValueError:
+        print("No argent?")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -146,6 +153,8 @@ def main():
         exercice15()
     if choix == "16":
         exercice16()
+    if choix == "17":
+        exercice17()
     else:
         print("Exercice non reconnu.")
         
