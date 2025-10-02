@@ -53,6 +53,13 @@ def exercice8():
     except ValueError:
         print("je suis incapable de diviser tes poubelles")
 
+def exercice9():
+    try:
+        chiffrecarré = int(input("entrez un chiffre pour avoir son carré : "))
+        print (f"le résultat est {chiffrecarré*chiffrecarré}")
+    except ValueError:
+        print("je suis incapable d'avoir le carré de ton ovni")
+    
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -72,6 +79,8 @@ def main():
         exercice7()
     if choix == "8":
         exercice8()
+    if choix == "9":
+        exercice9()
     else:
         print("Exercice non reconnu.")
         
