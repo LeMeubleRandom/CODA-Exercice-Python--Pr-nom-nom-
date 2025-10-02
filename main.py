@@ -20,7 +20,15 @@ def exercice4():
             print(f"vous avez {2025 - année} ans")
     except ValueError:
         print("réessayez avec une date valide")
-        
+
+def exercice5():
+    try:
+        chiffre = int(input("entrez un chiffre à additionner : "))
+        chiffre2 = int(input("entrez un second chiffre à additionner : "))
+        print(f"le résultat est {chiffre + chiffre2}")
+    except ValueError:
+        print("je suis incapable d'additionner tes machins")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -32,6 +40,8 @@ def main():
         exercice3()
     if choix == "4":
         exercice4()
+    if choix == "5":
+        exercice5()
     else:
         print("Exercice non reconnu.")
         
