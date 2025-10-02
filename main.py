@@ -49,7 +49,10 @@ def exercice8():
     try:
         chiffrediv = int(input("entrez un chiffre à diviser : "))
         chiffre2div = int(input("entrez un second chiffre à diviser : "))
-        print(f"le résultat est {chiffrediv/chiffre2div}")
+        if chiffre2div == 0:
+            print("invalide")
+        else:
+            print(f"le résultat est {chiffrediv/chiffre2div}")
     except ValueError:
         print("je suis incapable de diviser tes poubelles")
 
@@ -59,6 +62,20 @@ def exercice9():
         print (f"le résultat est {chiffrecarré*chiffrecarré}")
     except ValueError:
         print("je suis incapable d'avoir le carré de ton ovni")
+
+def exercice10():
+    try:
+        double = int(input("entrez un chiffre à doubler : "))
+        print (f"le résultat est {double*2}")
+    except ValueError:
+        print ("je suis incapable de doubler ta Trueno")
+
+def exercice11():
+    try:
+        moitié = int(input("entrez un chiffre pour avoir sa moitié : "))
+        print (f"le résultat est {moitié/2}")
+    except ValueError:
+        print ("je suis incapable d'avoir la moitié de ta triforce (y a 3 morceaux t'as capté)")
     
 def main():
     # Demande à l'utilisateur quel exercice exécuter
@@ -81,6 +98,10 @@ def main():
         exercice8()
     if choix == "9":
         exercice9()
+    if choix == "10":
+        exercice10()
+    if choix == "11":
+        exercice11()
     else:
         print("Exercice non reconnu.")
         
