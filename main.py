@@ -8,8 +8,6 @@ def main():
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
     if choix == "1":
         exercice1()
-    if choix == "2":
-        exercice2()
     else:
         print("Exercice non reconnu.")
         
