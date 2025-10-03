@@ -278,6 +278,7 @@ def exercice33():
     compteur = 1
     try:
         chiffre = int(input("entrez un chiffre pour calculer la liste : "))
+        print(f"Voici la table de multiplication de {chiffre}")
         for compteur in range(compteur, 11):
             total = compteur * chiffre
             print(f"{chiffre} x {compteur} = {total}")
@@ -359,10 +360,11 @@ def exercice39():
     import random
     random = random.randint(1,50)
     answer = input("Mon chiffre est-il pair ou impaire : ")
-    if answer == "pair" and random % 2 == 0:
-        print(f"Gagné! La réponse était {random}")
-    else:
-        print(f"Perdu... La réponse était {random}")
+    if answer == "pair":
+        if random % 2 == 0:
+            print(f"Gagné! La réponse était {random}")
+        else:
+            print(f"Perdu... La réponse était {random}")
     elif answer == "impair":
         if random % 2 == 0:
             print(f"Perdu... La réponse était {random}")
@@ -370,6 +372,14 @@ def exercice39():
             print(f"Gagné! La réponse était {random}")
     else:
         print(f"Mon chiffre n'est pas {answer}")
+
+def exercice40():
+    password = input("Veuillez entrer un Mot de Passe : ")
+    if len(password) >= 6:
+        print("valide")
+    else:
+        print("Trop court")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -451,6 +461,8 @@ def main():
         exercice38()
     if choix == "39":
         exercice39()
+    if choix == "40":
+        exercice40()
     else:
         print("Exercice non reconnu.")
         
