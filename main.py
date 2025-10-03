@@ -355,7 +355,21 @@ def exercice38():
     except ValueError:
         print("la calculation n'est pas calculable")
 
-
+def exercice39():
+    import random
+    random = random.randint(1,50)
+    answer = input("Mon chiffre est-il pair ou impaire : ")
+    if answer == "pair" and random % 2 == 0:
+        print(f"Gagné! La réponse était {random}")
+    else:
+        print(f"Perdu... La réponse était {random}")
+    elif answer == "impair":
+        if random % 2 == 0:
+            print(f"Perdu... La réponse était {random}")
+        else:
+            print(f"Gagné! La réponse était {random}")
+    else:
+        print(f"Mon chiffre n'est pas {answer}")
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -435,6 +449,8 @@ def main():
         exercice37()
     if choix == "38":
         exercice38()
+    if choix == "39":
+        exercice39()
     else:
         print("Exercice non reconnu.")
         
