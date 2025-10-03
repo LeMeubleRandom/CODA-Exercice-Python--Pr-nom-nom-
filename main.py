@@ -246,6 +246,15 @@ def exercice29():
     except ValueError:
         print("F-")
 
+def exercice30():
+    compteur = 1
+    try:
+        chiffre = int(input("entrez un chiffre pour définir la fin de la liste : "))
+        for compteur in range(compteur, chiffre + 1):
+            print(compteur)
+    except ValueError:
+        print("il y a une fin à tout")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -307,6 +316,8 @@ def main():
         exercice28()
     if choix == "29":
         exercice29()
+    if choix == "30":
+        exercice30()
     else:
         print("Exercice non reconnu.")
         
