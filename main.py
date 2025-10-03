@@ -232,6 +232,20 @@ def exercice28():
     except ValueError:
         print("c'est de l'uranium")
 
+def exercice29():
+    try:
+        note = int(input("entrez une note à évaluer : "))
+        if note < 10:
+            print("recalé")
+        elif 10 <= note <14:
+            print("passable")
+        elif 14 <= note < 16:
+            print("bien")
+        else:
+            print("très bien")
+    except ValueError:
+        print("F-")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -291,6 +305,8 @@ def main():
         exercice27()
     if choix == "28":
         exercice28()
+    if choix == "29":
+        exercice29()
     else:
         print("Exercice non reconnu.")
         
