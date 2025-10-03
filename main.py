@@ -331,6 +331,31 @@ def exercice37():
     except ValueError:
         print("pas carré ta pyramide")
 
+def exercice38():
+    try:
+        operation = input("choisissez votre opération entre +, -, x, / : ")
+        if operation == "+":
+            add1 = int(input("choisissez un chiffre à additionner : "))
+            add2 = int(input("choisissez-en un autre : "))
+            print(add1 + add2)
+        elif operation == "-":
+            sous1 = int(input("choisissez un chiffre à soustraire : "))
+            sous2 = int(input("choisissez celui qui va soustraire : "))
+            print(sous1 - sous2)
+        elif operation == "x":
+            mult1 = int(input("choisissez un chiffre à multiplier : "))
+            mult2 = int(input("choisissez le multiplicateur : "))
+            print(mult1 * mult2)
+        elif operation == "/":
+            div1 = int(input("choisissez un chiffre à diviser : "))
+            div2 = int(input("choisissez le diviseur : "))
+            print(div1/div2)
+        else:
+            print("je ne connais pas cette opération")
+    except ValueError:
+        print("la calculation n'est pas calculable")
+
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -408,6 +433,8 @@ def main():
         exercice36()
     if choix == "37":
         exercice37()
+    if choix == "38":
+        exercice38()
     else:
         print("Exercice non reconnu.")
         
