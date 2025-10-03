@@ -220,6 +220,18 @@ def exercice27():
     except ValueError:
         print("range ta chambre toi-même")
 
+def exercice28():
+    try:
+        température = int(input("entrez une température à vérifier : "))
+        if température < 0:
+            print("C'est de la glace")
+        elif température >= 100:
+            print("C'est de la vapeur")
+        else:
+            print("C'est de l'eau")
+    except ValueError:
+        print("c'est de l'uranium")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -277,6 +289,8 @@ def main():
         exercice26()
     if choix == "27":
         exercice27()
+    if choix == "28":
+        exercice28()
     else:
         print("Exercice non reconnu.")
         
