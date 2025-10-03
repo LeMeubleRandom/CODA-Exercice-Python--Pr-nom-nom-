@@ -284,6 +284,16 @@ def exercice33():
     except ValueError:
         print("a pu ikea")
 
+def exercice34():
+    compteur = 0
+    try:
+        chiffre = int(input("entrez un chiffre pour calculer la liste : "))
+        for compteur in range(compteur, chiffre + 1):
+            if compteur % 2 == 0:
+                print(compteur)
+    except ValueError:
+        print("des lettres paires???")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -353,6 +363,8 @@ def main():
         exercice32()
     if choix == "33":
         exercice33()
+    if choix == "34":
+        exercice34()
     else:
         print("Exercice non reconnu.")
         
