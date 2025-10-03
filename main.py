@@ -305,6 +305,15 @@ def exercice35():
     except ValueError:
         print("c'est pas carré")
 
+def exercice36():
+    try:
+        message = input("choisissez le message que vous voulez dupliquer : ")
+        echo = int(input("choisissez le nombre de fois que vous voulez dupliquer un message : "))
+        duplicated_message = (f"{message}, ") * echo
+        print(f"{duplicated_message}")
+    except ValueError:
+        print("error 404")
+
 def main():
     # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -376,8 +385,10 @@ def main():
         exercice33()
     if choix == "34":
         exercice34()
-    if choix =="35":
+    if choix == "35":
         exercice35()
+    if choix == "36":
+        exercice36()
     else:
         print("Exercice non reconnu.")
         
