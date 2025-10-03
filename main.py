@@ -175,7 +175,7 @@ def exercice23():
 def exercice24():
     try:
         chiffre1 = int(input("entrez un chiffre à vérifier : "))
-        chiffre2 = int(input("entrez un autre chiffre à vérifier"))
+        chiffre2 = int(input("entrez un autre chiffre à vérifier : "))
         if chiffre1 > chiffre2:
             print(f"{chiffre1} est supérieur à {chiffre2}")
         elif chiffre2 > chiffre1:
@@ -184,6 +184,41 @@ def exercice24():
             print("ces chiffres sont égaux")
     except ValueError:
         print("un chiffre, tu sais ce que c'est?")
+
+def exercice25():
+    try:
+        chiffre1 = int(input("entrez un chiffre à classer : "))
+        chiffre2 = int(input("entrez un autre chiffre à classer : "))
+        if chiffre1 < chiffre2:
+            print("vous avez entrez ces chiffres dans l'ordre croissant")
+        elif chiffre1 > chiffre2:
+            print("vous n'avez pas entré ces chiffres dans l'ordre croissant")
+        else:
+            print("ces chiffres sont égaux")
+    except ValueError:
+        print("débrouille-toi pour classer tes hiéroglyphes")
+
+def exercice26():
+    try:
+        chiffre = int(input("entrez un chiffre à vérifier : "))
+        if chiffre % 5 == 0:
+            print(f"{chiffre} est divisible par 5")
+        else:
+            print(f"{chiffre} n'est pas divisible par 5")
+    except ValueError:
+        print("ce pani n'est pas divisible tout court")
+
+def exercice27():
+    try:
+        age1 = int(input("entrez un chiffre à classer : "))
+        if age1 < 12:
+            print("C'est un enfant")
+        elif age1 > 17:
+            print("C'est un adulte")
+        else:
+            print("C'est un adolescent")
+    except ValueError:
+        print("range ta chambre toi-même")
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
@@ -236,6 +271,12 @@ def main():
         exercice23()
     if choix == "24":
         exercice24()
+    if choix == "25":
+        exercice25()
+    if choix == "26":
+        exercice26()
+    if choix == "27":
+        exercice27()
     else:
         print("Exercice non reconnu.")
         
