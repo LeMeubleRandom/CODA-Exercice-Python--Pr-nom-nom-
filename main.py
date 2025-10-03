@@ -257,11 +257,22 @@ def exercice30():
 
 def exercice31():
     try:
-        chiffre = int(input("entrez un chiffre pour définir la fin de la liste : "))
+        chiffre = int(input("entrez un chiffre pour définir le début de la liste : "))
         for compteur in range(chiffre, -1, -1):
             print(compteur)
     except ValueError:
         print("Il y a un début à presque tout")
+
+def exercice32():
+    compteur = 0
+    total = 0
+    try:
+        chiffre = int(input("entrez un chiffre pour calculer la liste : "))
+        for compteur in range(compteur, chiffre + 1):
+            total = total + compteur
+        print(total)
+    except ValueError:
+        print("cette liste ne sera pas listable")
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
@@ -328,6 +339,8 @@ def main():
         exercice30()
     if choix == "31":
         exercice31()
+    if choix == "32":
+        exercice32()
     else:
         print("Exercice non reconnu.")
         
