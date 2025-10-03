@@ -174,8 +174,16 @@ def exercice23():
 
 def exercice24():
     try:
-        int(input(""))
-        
+        chiffre1 = int(input("entrez un chiffre à vérifier : "))
+        chiffre2 = int(input("entrez un autre chiffre à vérifier"))
+        if chiffre1 > chiffre2:
+            print(f"{chiffre1} est supérieur à {chiffre2}")
+        elif chiffre2 > chiffre1:
+            print(f"{chiffre2} est supérieur à {chiffre1}")
+        else:
+            print("ces chiffres sont égaux")
+    except ValueError:
+        print("un chiffre, tu sais ce que c'est?")
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
