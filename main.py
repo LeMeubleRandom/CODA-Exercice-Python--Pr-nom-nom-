@@ -299,9 +299,8 @@ def exercice35():
     try:
         chiffre = int(input("entrez un chiffre pour calculer la liste : "))
         for compteur in range(compteur, chiffre + 1):
-            compteur = compteur * compteur
-            print(compteur)
-            compteur = compteur / compteur
+            carré = compteur ** 2
+            print(carré)
     except ValueError:
         print("c'est pas carré")
 
@@ -313,6 +312,24 @@ def exercice36():
         print(f"{duplicated_message}")
     except ValueError:
         print("error 404")
+
+def exercice37():
+    compteur = 1
+    try:
+        pyramide = int(input("choisissez votre type de pyramide 1 ou 2 : "))
+        hauteur = int(input("définisser la hauteur de votre pyramide : "))
+        if pyramide == 1:
+            for i in range(hauteur):
+                print(f"0"*(hauteur - 1 - i),"1"*(compteur),"0"*(hauteur - 1 - i))
+                compteur = compteur + 2
+        elif pyramide == 2:
+            for i in range(hauteur):
+                print(f" "*(hauteur - 1 - i),"*"*(compteur))
+                compteur = compteur + 2
+        else:
+            print("cette pyramide n'existe pas")
+    except ValueError:
+        print("pas carré ta pyramide")
 
 def main():
     # Demande à l'utilisateur quel exercice exécuter
@@ -389,6 +406,8 @@ def main():
         exercice35()
     if choix == "36":
         exercice36()
+    if choix == "37":
+        exercice37()
     else:
         print("Exercice non reconnu.")
         
